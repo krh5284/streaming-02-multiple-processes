@@ -5,3 +5,38 @@ This will clear the console output.
 Run the file once while the tasks are short. 
 
 Copy and paste the terminal results (when task_duration is 0) here.
+
+PS C:\Users\krh52\Anaconda\ds-venv\streaming-02-multiple-processes> & C:/Users/krh52/AppData/Local/Programs/Python/Python310/python.exe c:/Users/krh52/Anaconda/ds-venv/streaming-02-multiple-processes/multiple_processes.py
+2024-05-08 19:44:59,851 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2024-05-08 at 07:44 PM
+  Operating System: nt Windows 10
+  Python Version:   3.10.2
+  Path to Interpreter:  C:\Users\krh52\AppData\Local\Programs\Python\Python310\python.exe
+======================================================================
+
+2024-05-08 19:44:59,852 - INFO - Called recreate_database().
+2024-05-08 19:44:59,852 - INFO - Called drop_table().
+2024-05-08 19:44:59,879 - INFO - Table 'pets' dropped successfully.
+2024-05-08 19:44:59,881 - INFO - Called create_table().
+2024-05-08 19:44:59,893 - INFO - Table 'pets' created successfully.
+2024-05-08 19:45:00,080 - INFO - Called process_one().
+2024-05-08 19:45:00,080 - INFO - Called process_two().
+2024-05-08 19:45:00,080 - INFO -   Called insert_pet() with process=P1, name=Ace, breed=Dog.
+2024-05-08 19:45:00,080 - INFO -   Called insert_pet() with process=P2, name=Cooper, breed=Rabbit.
+2024-05-08 19:45:00,087 - INFO - Called process_three().
+2024-05-08 19:45:00,087 - INFO -   Called insert_pet() with process=P3, name=Emma, breed=Rabbit.
+2024-05-08 19:45:00,112 - INFO -   Called insert_pet() with process=P1, name=Buddy, breed=Dog.
+2024-05-08 19:45:00,130 - INFO -   Called insert_pet() with process=P2, name=Dingo, breed=Dog.
+2024-05-08 19:45:00,146 - INFO -   Called insert_pet() with process=P3, name=Felix, breed=Cat.
+2024-05-08 19:45:00,163 - INFO - 
+SUCCESS: All processes successfully completed!
+
+Now - increase the task duration (representing
+      the time the task has the database
+      tied up during an insert statement).
+How well do multiple, concurrent processes share a database
+    when each task takes more time?
+How can multiple processes share a resource
+    without interfering with each other?
